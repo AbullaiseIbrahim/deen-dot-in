@@ -22,7 +22,7 @@
     googleReview: "https://g.page/r/CQQldhfeqD34EBE/review",
     instagram:    "https://www.instagram.com/deen.in_?igsh=MTc3MjRvZHpqMWdjZQ==",
     facebook:     "https://www.facebook.com/share/1897GWeQHr/?mibextid=wwXIfr",
-    whatsapp:     "https://wa.me/918086001241",
+    whatsapp:     "https://wa.me/917306110993",
     website:      "#",   // TODO: paste your website URL here
     youtube:      "https://youtube.com/@deen.in0484?si=gksIfPzfcYuD5qjL"
   };
@@ -155,11 +155,11 @@
   }
 
   .shop-name {
-    font-size: 13px;
+    font-size: 9px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--text-soft);
-    margin: 0 0 40px;
+    margin: 0 0 80px;
     text-align: center;
   }
 
@@ -335,12 +335,11 @@
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Theme: respect saved choice, else system preference
+  // Theme: respect saved choice, else default to dark
   const root = document.documentElement;
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('deenin-theme');
-  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  root.setAttribute('data-theme', saved || (systemDark ? 'dark' : 'light'));
+  root.setAttribute('data-theme', saved || 'dark');
 
   toggle.addEventListener('click', () => {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
